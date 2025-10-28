@@ -35,7 +35,7 @@ const Login = () => {
           password
         };
         try{
-        const response = await axios.post("http://localhost:3000/api/v1/register", formData);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/register`, formData);
          toast.success("Registration successfull");
          navigate("/login");
        }catch(err){
